@@ -6,7 +6,7 @@
 Summary:	Provides a interface to GNU Libidn for PHP
 Name:		php-%{modname}
 Version:	1.2b
-Release:	%mkrel 5
+Release:	%mkrel 6
 Group:		Development/PHP
 URL:		http://php-idn.bayour.com/
 License:	PHP License
@@ -27,15 +27,7 @@ Binding to the GNU libidn for using Internationalized Domain Names.
 %patch0 -p0
 
 %build
-export CFLAGS="%{optflags}"
-export CXXFLAGS="%{optflags}"
-export FFLAGS="%{optflags}"
-
-%if %mdkversion >= 200710
-export CFLAGS="$CFLAGS -fstack-protector"
-export CXXFLAGS="$CXXFLAGS -fstack-protector"
-export FFLAGS="$FFLAGS -fstack-protector"
-%endif
+%serverbuild
 
 phpize --clean; phpize
 %configure2_5x --with-libdir=%{_lib} \
