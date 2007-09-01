@@ -6,7 +6,7 @@
 Summary:	Provides a interface to GNU Libidn for PHP
 Name:		php-%{modname}
 Version:	1.2b
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		Development/PHP
 URL:		http://php-idn.bayour.com/
 License:	PHP License
