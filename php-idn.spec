@@ -6,10 +6,10 @@
 Summary:	Provides a interface to GNU Libidn for PHP
 Name:		php-%{modname}
 Version:	1.2b
-Release:	%mkrel 7
+Release:	%mkrel 8
 Group:		Development/PHP
-URL:		http://php-idn.bayour.com/
 License:	PHP License
+URL:		http://php-idn.bayour.com/
 Source0:	http://php-idn.bayour.com/idn_%{version}.tar.bz2
 Patch0:		idn-1.1-lib64.diff
 BuildRequires:	php-devel >= 3:5.2.0
@@ -55,6 +55,18 @@ idn.default_charset = "ISO-8859-1"
 idn.use_std_3_ascii_rules = "0"
 
 EOF
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
