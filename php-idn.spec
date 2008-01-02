@@ -15,6 +15,7 @@ Patch0:		idn-1.1-lib64.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	idn-devel
 Epoch:		1
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Binding to the GNU libidn for using Internationalized Domain Names.
