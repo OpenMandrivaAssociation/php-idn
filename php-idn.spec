@@ -6,7 +6,7 @@
 Summary:	Provides a interface to GNU Libidn for PHP
 Name:		php-%{modname}
 Version:	1.2b
-Release:	%mkrel 10
+Release:	%mkrel 11
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-idn.bayour.com/
@@ -15,7 +15,7 @@ Patch0:		idn-1.1-lib64.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	idn-devel
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Binding to the GNU libidn for using Internationalized Domain Names.
