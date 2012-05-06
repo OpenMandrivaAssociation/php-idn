@@ -13,6 +13,7 @@ URL:		http://php-idn.bayour.com/
 Source0:	http://php-idn.bayour.com/idn_%{version}.tar.bz2
 Patch0:		idn-1.1-lib64.diff
 Patch1:		idn-1.2b-php53.diff
+Patch2:		idn_1.2b-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	idn-devel
 Epoch:		1
@@ -27,6 +28,7 @@ Binding to the GNU libidn for using Internationalized Domain Names.
 %setup -q -n idn-%{version}
 %patch0 -p0
 %patch1 -p1
+%patch2 -p0
 
 %build
 %serverbuild
