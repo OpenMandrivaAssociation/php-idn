@@ -1,0 +1,11 @@
+--- config.m4	2004-12-18 16:43:03.000000000 +0100
++++ config.m4.oden	2004-12-19 18:51:15.604102538 +0100
+@@ -22,7 +22,7 @@
+   fi
+ 
+   IDN_INCDIR=$IDN_DIR/include
+-  IDN_LIBDIR=$IDN_DIR/lib
++  IDN_LIBDIR=$IDN_DIR/$PHP_LIBNAME
+ 
+   AC_CHECK_LIB(idn,
+ 	       idna_to_unicode_8z4z,
