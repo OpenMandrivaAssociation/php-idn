@@ -9,7 +9,7 @@ Version:	1.2b
 Release:	30
 Group:		Development/PHP
 License:	PHP License
-URL:		http://php-idn.bayour.com/
+URL:		https://php-idn.bayour.com/
 Source0:	http://php-idn.bayour.com/idn_%{version}.tar.bz2
 Patch0:		idn-1.1-lib64.diff
 Patch1:		idn-1.2b-php53.diff
